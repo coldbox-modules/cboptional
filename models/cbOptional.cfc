@@ -112,6 +112,8 @@ component{
 	 * This method returns the same cbOptional instance, so you can concatenate it to call multiple consumers
 	 *
 	 * @consumer block to be executed if a value is present
+	 *
+	 * @return The same instance
 	 */
 	cbOptional function ifPresent( required consumer ){
 		if( this.isPresent() ){
@@ -194,8 +196,22 @@ component{
 	*
 	* @return the value if present otherwise the result of other.get()
 	*/
-	function orElseGet( required supplier ){
+	any function orElseGet( required supplier ){
 		return ( this.isPresent() ? this.get() : arguments.supplier() );
+	}
+
+	/**
+	* Runs the `runnable` closure/lambda if the value is not set and the same optional instance is returned.
+	*
+	* @runnable a lambda or closure that will run
+	*
+	* @return the same optional instance
+	*/
+	cbOptional function orElseRun( required runnable ){
+		if( this.isPresent() ){
+			arguments.runnable();
+		}
+		return this;
 	}
 
 	/**
