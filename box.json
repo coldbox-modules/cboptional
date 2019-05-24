@@ -1,0 +1,37 @@
+{
+    "name":"CBOptional",
+    "version":"1.0.0",
+    "location":"https://downloads.ortussolutions.com/ortussolutions/coldbox-modules/cboptional/@build.version@/cboptional-@build.version@.zip",
+    "author":"Ortus Solutions, Corp",
+    "homepage":"https://github.com/ortus-solutions/cboptional",
+    "documentation":"https://github.com/ortus-solutions/cboptional",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/ortus-solutions/cboptional"
+    },
+    "bugs":"https://github.com/ortus-solutions/cboptional/issues",
+    "shortDescription":"The CFML implementation of Java Optional with Dynamic Goodness",
+    "slug":"cboptional",
+    "type":"modules",
+    "keywords":"java optional, streams, reactive, functional programming",
+    "license":[
+        {
+            "type":"Apache2",
+            "url":"http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "contributors":[],
+    "dependencies":{},
+    "devDependencies":{
+    },
+    "installPaths":{
+    },
+    "ignore":[
+        "**/.*",
+        "test-harness",
+        "*/.md"
+    ],
+    "scripts":{
+        "toMaster":"recipe build/toMaster.boxr"
+    }
+}
