@@ -3,13 +3,13 @@
     "version":"1.0.0",
     "location":"https://downloads.ortussolutions.com/ortussolutions/coldbox-modules/cboptional/@build.version@/cboptional-@build.version@.zip",
     "author":"Ortus Solutions, Corp",
-    "homepage":"https://github.com/ortus-solutions/cboptional",
-    "documentation":"https://github.com/ortus-solutions/cboptional",
+    "homepage":"https://github.com/coldbox-modules/cboptional",
+    "documentation":"https://github.com/coldbox-modules/cboptional",
     "repository":{
         "type":"git",
-        "url":"https://github.com/ortus-solutions/cboptional"
+        "url":"https://github.com/coldbox-modules/cboptional"
     },
-    "bugs":"https://github.com/ortus-solutions/cboptional/issues",
+    "bugs":"https://github.com/coldbox-modules/cboptional/issues",
     "shortDescription":"The CFML implementation of Java Optional with Dynamic Goodness",
     "slug":"cboptional",
     "type":"modules",
