@@ -22,10 +22,8 @@
     ],
     "contributors":[],
     "dependencies":{},
-    "devDependencies":{
-    },
-    "installPaths":{
-    },
+    "devDependencies":{},
+    "installPaths":{},
     "ignore":[
         "**/.*",
         "test-harness",

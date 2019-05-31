@@ -7,7 +7,7 @@ notifications:
 env:
   # Fill out these global variables for build process
   global:
-    - MODULE_ID=cbOptional
+    - MODULE_ID=cboptional
   matrix:
     - ENGINE=lucee@5
     - ENGINE=adobe@11
