@@ -1,6 +1,6 @@
 {
     "name":"CBOptional",
-    "version":"1.1.0",
+    "version":"1.0.1",
     "location":"https://downloads.ortussolutions.com/ortussolutions/coldbox-modules/cboptional/@build.version@/cboptional-@build.version@.zip",
     "author":"Ortus Solutions, Corp",
     "homepage":"https://github.com/coldbox-modules/cboptional",

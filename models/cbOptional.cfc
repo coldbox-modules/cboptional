@@ -208,7 +208,7 @@ component{
 	* @return the same optional instance
 	*/
 	cbOptional function orElseRun( required runnable ){
-		if( this.isPresent() ){
+		if( !this.isPresent() ){
 			arguments.runnable();
 		}
 		return this;
