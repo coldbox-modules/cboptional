@@ -129,12 +129,13 @@ deploy:
     skip_cleanup: true
     edge: true
     file_glob: true
-    file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/*.*
-    release_notes_file: changelog.md
+    file: ${TRAVIS_BUILD_DIR}/.artifacts/${MODULE_ID}/*
+    #release_notes_file: changelog.md
     name: ${TRAVIS_TAG}-snapshot
     tag_name: ${TRAVIS_TAG}-snapshot
+    target_commitish: development
     overwrite: true
-    draft: true
+    draft: false
     prerelease: true
 
 # Once API Docs and Binaries are deployed to S3 Publish to ForgeBox
