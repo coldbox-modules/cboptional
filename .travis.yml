@@ -129,7 +129,7 @@ deploy:
     skip_cleanup: true
     edge: true
     file_glob: true
-    file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/*
+    file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/*.*
     release_notes_file: changelog.md
     name: ${TRAVIS_TAG}-snapshot
     tag_name: ${TRAVIS_TAG}-snapshot
