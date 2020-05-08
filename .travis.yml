@@ -113,6 +113,21 @@ deploy:
     overwrite: true
     tag_name: $TRAVIS_TAG
 
+  # Github Snapshot release
+  - provider: releases
+    api_key: ${GITHUB_TOKEN}
+    on:
+      branch:
+        - development
+      condition: "$ENGINE = lucee@5"
+    skip_cleanup: true
+    file: changelog.md
+    overwrite: true
+    tag_name: ${TRAVIS_TAG}-snapshot
+    target_commitish: development
+    draft: true
+    prerelease: true
+
 # Once API Docs and Binaries are deployed to S3 Publish to ForgeBox
 after_deploy:
   # Move to build out artifact
