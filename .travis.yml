@@ -109,9 +109,15 @@ deploy:
         - master
       condition: "$ENGINE = lucee@5"
     skip_cleanup: true
-    file: changelog.md
+    edge: true
+    file_glob: true
+    file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/*
+    release_notes_file: changelog.md
+    name: ${TRAVIS_TAG}
+    tag_name: ${TRAVIS_TAG}
     overwrite: true
-    tag_name: $TRAVIS_TAG
+    draft: false
+    prerelease: false
 
   # Github Snapshot release
   - provider: releases
@@ -121,12 +127,12 @@ deploy:
         - development
       condition: "$ENGINE = lucee@5"
     skip_cleanup: true
+    edge: true
     file_glob: true
     file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/*
     release_notes_file: changelog.md
     name: ${TRAVIS_TAG}-snapshot
     tag_name: ${TRAVIS_TAG}-snapshot
-    target_commitish: development
     overwrite: true
     draft: true
     prerelease: true
