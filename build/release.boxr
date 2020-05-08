@@ -2,7 +2,7 @@
 
 # Check out master and update it locally
 !git checkout -f master
-!git pull
+!git pull origin master
 
 # Merge development into it for release
 !git merge --no-ff development
