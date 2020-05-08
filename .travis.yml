@@ -123,6 +123,7 @@ deploy:
     skip_cleanup: true
     file: changelog.md
     overwrite: true
+    name: ${TRAVIS_TAG}-snapshot
     tag_name: ${TRAVIS_TAG}-snapshot
     target_commitish: development
     draft: true
