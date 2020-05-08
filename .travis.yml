@@ -111,32 +111,11 @@ deploy:
     skip_cleanup: true
     edge: true
     file_glob: true
-    file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/*
+    file: $TRAVIS_BUILD_DIR/.artifacts/$MODULE_ID/**/*
     release_notes_file: changelog.md
-    name: ${TRAVIS_TAG}
-    tag_name: ${TRAVIS_TAG}
+    name: v${TRAVIS_TAG}
+    tag_name: v${TRAVIS_TAG}
     overwrite: true
-    draft: false
-    prerelease: false
-
-  # Github Snapshot release
-  - provider: releases
-    api_key: ${GITHUB_TOKEN}
-    on:
-      branch:
-        - development
-      condition: "$ENGINE = lucee@5"
-    skip_cleanup: true
-    edge: true
-    file_glob: true
-    file: ${TRAVIS_BUILD_DIR}/.artifacts/${MODULE_ID}/**/*
-    release_notes_file: changelog.md
-    #body: changelog.md
-    name: ${TRAVIS_TAG}-snapshot
-    tag_name: ${TRAVIS_TAG}-snapshot
-    target_commitish: development
-    overwrite: true
-    prerelease: true
 
 # Once API Docs and Binaries are deployed to S3 Publish to ForgeBox
 after_deploy:
