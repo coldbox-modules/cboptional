@@ -58,7 +58,7 @@ script:
   # Build Project
   - box task run taskfile=build/Build target=run :version=${TARGET_VERSION} :projectName=${MODULE_ID} :buildID=${TRAVIS_BUILD_NUMBER} :branch=${TRAVIS_BRANCH}
   # Cat results for debugging
-  - cat build/results.json
+  #- cat build/results.json
 
 after_failure:
   - cd $TRAVIS_BUILD_DIR/test-harness
@@ -129,7 +129,7 @@ deploy:
     skip_cleanup: true
     edge: true
     file_glob: true
-    file: ${TRAVIS_BUILD_DIR}/.artifacts/${MODULE_ID}/*
+    file: ${TRAVIS_BUILD_DIR}/.artifacts/${MODULE_ID}/*.zip
     #release_notes_file: changelog.md
     name: ${TRAVIS_TAG}-snapshot
     tag_name: ${TRAVIS_TAG}-snapshot
