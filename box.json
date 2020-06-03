@@ -30,7 +30,7 @@
         "*/.md"
     ],
     "scripts":{
-        "release":"recipe build/release.boxr",
+		"release":"recipe build/release.boxr",
         "format":"cfformat run models/,test-harness/tests/,*.cfc --overwrite",
         "format:watch":"cfformat watch models/,test-harness/tests/,*.cfc ./.cfformat.json",
         "format:check":"cfformat check models/,test-harness/tests/,*.cfc"
